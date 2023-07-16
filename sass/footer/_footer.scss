@@ -1,0 +1,169 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer{
+    font-family: v.$fuente-principal;
+    padding: 1rem;
+    @include m.laptop{
+        padding: 5rem 0;
+    }
+    &__title{
+        font-size: 2.5rem;
+        margin: 1rem 0 2rem;
+        @include m.laptop{
+            font-size: 4rem;
+            margin: 1rem 0 3.5rem;
+        }
+    }
+
+    &__grid{
+        @include m.laptop{
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(2, 3fr) 4fr;
+        }
+    }
+
+    &__subtitle{
+        font-size: 1rem;
+        margin: 2rem 0 0.5rem;
+        @include m.laptop{
+            font-size: 1.3rem;
+            font-weight: normal;
+        }
+    }
+    &__text{
+        margin: 0.4rem 0;
+        line-height: 1.5;
+        @include m.laptop{
+            font-size: 1.3rem;
+            font-weight: normal;
+        }
+    }
+
+    &__education{
+        @include m.laptop{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+    }
+    &__social{
+        @include m.laptop{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    }
+    &__sign{
+        @include m.laptop{
+            grid-column: 3/4;
+        }
+    }
+
+    &__signup{
+        display: flex;
+        margin: 1.5rem 0;
+    }
+    &__input{
+        border: none;
+        padding: 0.6em 0.95em;
+        background-color: #EEEEEE;
+        font-size: 1rem;
+        width: 100%;
+        @include m.laptop{
+            padding: 0.8em 1.1em;
+        }
+    }
+    &__button{
+        background-color: v.$blue;
+        color: v.$white;
+        font-size: 1rem;
+        padding: 0.55em 1.7em;
+        border: none;
+        font-weight: bold;
+        min-width: fit-content;
+        @include m.laptop{
+            padding: 0.55rem 2rem;
+        }
+    }
+    &__list{
+        font-size: 0.95rem;
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+        @include m.laptop{
+            font-size: 1.3rem;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        color: inherit;
+        &--arrow{
+            &::after{
+                content: " >";
+                display: inline;
+            }
+        }
+    }
+    &__media{
+        display: flex;
+        gap: 1rem;
+        margin: 1.5rem 0;
+        @include m.laptop{
+            gap: 0.6rem;
+        }
+    }
+
+    &__socialMedia{
+        width: 37px;
+        height: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &--fb{
+            background-color: #3477F2;
+        }
+        &--tw{
+            background-color: #1DA1F2;
+        }
+        &--yt{
+            background-color: #FF001D;
+        }
+        &--ig{
+            background-color: #F77737;
+        }
+        @include m.laptop{
+            width: 43px;
+            height: 43px;
+        }
+    }
+    &__main{
+        @include m.laptop{
+            margin-top: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__selects{
+        @include m.laptop{
+            display: flex;
+            gap:0.3rem;
+        }
+    }
+    &__legal{
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+        @include m.laptop{
+            flex-direction: row;
+        }
+    }
+}

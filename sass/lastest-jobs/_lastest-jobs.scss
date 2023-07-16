@@ -1,0 +1,47 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.lastest-jobs{
+    padding: 3rem 0;
+    @include m.laptop{
+        display: grid;
+        height: 50rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__info{
+        font-family: v.$fuente-principal;
+        line-height: 1.7;
+        padding: 2rem;
+        gap: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: v.$lightBlue;
+        @include m.laptop{
+            padding: 8rem;
+        }
+    }
+    &__text{
+        font-size: 1.2rem;
+        font-weight: 500;
+        @include m.laptop{
+            font-size: 1.7rem;
+        }
+    }
+    &__link{
+        display: block;
+        text-decoration: none;
+        align-self: flex-start;
+        font-size: 1.2rem;
+        font-weight: bold;
+        @include m.laptop{
+            font-size: 1.7rem;
+        }
+    }
+    &__image{
+        @include m.laptop{
+            height: 100%;
+        }
+    }
+}

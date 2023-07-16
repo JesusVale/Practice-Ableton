@@ -1,0 +1,46 @@
+@use "../base//variables" as v;
+@use "../base//mixins" as m;
+
+.main-page{
+    &__text{
+        font-family: v.$fuente-principal;
+        line-height: 1.7;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        @include m.tablet{
+            width: 50%;
+            padding-top: 5.5rem;
+            padding-bottom: 5.5rem;
+            line-height: 1.8;
+        }
+    }
+    &__title{
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.2rem;
+        @include m.tablet{
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+    }
+    &__description{
+        margin: 0;
+        font-size: 0.9rem;
+        @include m.tablet{
+            font-size: 1.1rem;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        color: v.$blue;
+        &:focus{
+            color: v.$blue;
+        }
+    }
+    &__image{
+        margin: 5.5rem auto;
+    }
+
+}

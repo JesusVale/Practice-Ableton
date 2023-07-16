@@ -1,0 +1,34 @@
+@use "../base//variables" as v;
+
+.lemon-collage{
+    margin: 3rem auto;
+    height: 58vw;
+    display: flex;
+    align-items: center;
+    &__square{
+        background-color: v.$yellow;
+        width: 58vw;
+        height: 58vw;
+        position: absolute;
+        right: 0;
+    }
+    &__image1{
+        width: 41vw;
+        height: 41vw;
+        background-image: url("https://ableton-production.imgix.net/about/photo-1.jpg?dpr=1.25&fit=crop&h=195&ixjsv=1.1.3&w=195");
+        background-repeat: none;
+        background-size: cover;
+
+        position: relative;
+    }
+
+    &__image2{
+        background-image: url("https://images.pexels.com/photos/1876279/pexels-photo-1876279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-repeat: none;
+        background-size: cover;
+        width: 33vw;
+        height: 25vw;
+        position: relative;
+        left: 10%;
+    }
+}

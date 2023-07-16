@@ -1,0 +1,42 @@
+@use "../base/variables" as v;
+
+
+.green-collage{
+    margin: 3rem auto;
+    height: 75vw;
+    &__square{
+        position: absolute;
+        background-color: v.$green;
+        left: 0;
+        width: 58vw;
+        height: 75vw;
+    }
+    &__img1{
+        background-image: url("https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        background-position: 50% 50%;
+        width: 33vw;
+        height: 25vw;
+        position: relative;
+        top: 8vw;
+    }
+    &__img2{
+        background-image: url("https://images.pexels.com/photos/92083/pexels-photo-92083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        background-position: 50% 50%;
+        width: 33vw;
+        height: 25vw;
+        position: relative;
+        margin-top: 16vw;
+    }
+    &__img3{
+        background-image: url("https://images.pexels.com/photos/379962/pexels-photo-379962.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        background-position: 50% 50%;
+        width: 41vw;
+        height: 41vw;
+        left: 50%;
+        bottom: 65%;
+        position: relative;
+    }
+}

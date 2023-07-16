@@ -1,0 +1,33 @@
+@use "../base/variables" as v;
+
+.select{
+    width: fit-content;
+    display: flex;
+    position: relative;
+    font-family: v.$fuente-principal;
+    &:focus{
+        outline: 1px solid black;
+    }
+    &__control{
+        appearance: none;
+        border: none;
+        padding: 0.5rem;
+        padding-right: 4rem;
+        font-weight: bold;
+        background-color: #EEE;
+        &:focus{
+            outline: none;
+        }
+    }
+    &__arrow{
+        pointer-events: none;
+        background-color: #EEE;
+        padding: 0.7rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+}

@@ -1,0 +1,22 @@
+@use "../base/variables" as v;
+@use "../base//mixins" as m;
+
+.hero{
+    height: 700px;
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    background-position: left center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__titulo{
+        font-family: v.$fuente-principal;
+        color: v.$orange;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 4rem;
+        @include m.laptop{
+           font-size: 8rem; 
+        }
+    }
+}
